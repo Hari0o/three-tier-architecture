@@ -54,7 +54,7 @@ spec:
         - containerPort: {{ .Values.frontend.service.port }}
         envFrom:
         - configMapRef:
-            name: {{ .Values.frontend.configMapName }}
+            name: {{ .Release.Name }}-frontend-config
 ---
 apiVersion: apps/v1
 kind: Deployment
