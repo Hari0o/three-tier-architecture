@@ -38,9 +38,9 @@ redis:
 
 # ConfigMap data
 configMaps:
-  backend-config:
+  backendConfig:
     REDIS_URI: redis://redis-svc:6379
-  frontend-config:
+  frontendConfig:
     BACKEND_URL: http://backend-svc:8000
 
 # Service Account configuration
