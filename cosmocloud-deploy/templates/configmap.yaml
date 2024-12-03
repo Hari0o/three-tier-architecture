@@ -6,8 +6,8 @@ metadata:
     app: {{ .Chart.Name }}
     component: backend
 data:
-{{- range $key, $value := .Values.configMaps.backend-config }}
-  {{ $key }}: {{ $value | quote }}
+{{- range $key, $value := .Values.configMaps.backendConfig }}
+  {{ $key }}: "{{ $value }}"
 {{- end }}
 
 ---
@@ -19,6 +19,6 @@ metadata:
     app: {{ .Chart.Name }}
     component: frontend
 data:
-{{- range $key, $value := .Values.configMaps.frontend-config }}
-  {{ $key }}: {{ $value | quote }}
+{{- range $key, $value := .Values.configMaps.frontendConfig }}
+  {{ $key }}: "{{ $value }}"
 {{- end }}
